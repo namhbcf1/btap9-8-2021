@@ -1,0 +1,33 @@
+class Rectangle():
+    def __init__(self,width,length):
+        self.width=width
+        self.length=length
+    def Area(self):
+        return self.width*self.length   
+    def Perimeter(self):
+        return (self.width+self.length)*2
+    def display(self):
+        print("-------------------")
+        print("The length of rectangle: ", self.length)
+        print("The width of rectangle: ", self.width)
+        print("The perimeter of rectangle: ", self.Perimeter())
+        print("The area of rectangle: ", self.Area())
+
+class Parallelepipede(Rectangle):
+    def __init__(self, length, width , height):
+        Rectangle.__init__(self, length, width)
+        self.height = height
+        
+    def volume(self):
+        return self.length*self.width*self.height
+
+a=int(input("Enter length of rectangle: "))
+b=int(input("Enter width of rectangle: "))
+c=int(input("Enter height of rectangle: "))
+
+
+newRectangle = Rectangle(a ,b )
+newRectangle.display()
+print("----------------------------------")
+newParallelepipede = Parallelepipede(a , b , c)
+print("the volume of myParallelepipede is: " , newParallelepipede.volume())
