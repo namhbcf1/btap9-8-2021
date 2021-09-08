@@ -8,10 +8,10 @@ class Rectangle():
         return (self.width+self.length)*2
     def display(self):
         print("-------------------")
-        print("The length of rectangle: ", self.length)
-        print("The width of rectangle: ", self.width)
-        print("The perimeter of rectangle: ", self.Perimeter())
-        print("The area of rectangle: ", self.Area())
+        print("length : ", self.length)
+        print("width : ", self.width)
+        print("perimeter : ", self.Perimeter())
+        print("area : ", self.Area())
 
 class Parallelepipede(Rectangle):
     def __init__(self, length, width , height):
@@ -21,13 +21,13 @@ class Parallelepipede(Rectangle):
     def volume(self):
         return self.length*self.width*self.height
 
-a=int(input("Enter length of rectangle: "))
-b=int(input("Enter width of rectangle: "))
-c=int(input("Enter height of rectangle: "))
+a=int(input("Enter length : "))
+b=int(input("Enter width : "))
+c=int(input("Enter height: "))
 
 
 newRectangle = Rectangle(a ,b )
 newRectangle.display()
 print("----------------------------------")
 newParallelepipede = Parallelepipede(a , b , c)
-print("the volume of myParallelepipede is: " , newParallelepipede.volume())
+print("volume : " , newParallelepipede.volume())
