@@ -6,5 +6,8 @@ class hinhchunhat():
     def DientichHCN(self):
         return self.dai*self.rong
 
-show = hinhchunhat(int(input()), int(input()))
+a=int(input("Enter length of rectangle: "))
+b=int(input("Enter width of rectangle: "))
+
+show = hinhchunhat(a, b)
 print(show.DientichHCN())
